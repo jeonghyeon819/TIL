@@ -1,6 +1,6 @@
 package java따라하기;
 
-public class 제어문 {
+public class 기본1_제어문 {
 	
 	public static void main(String[] args) {
 		
