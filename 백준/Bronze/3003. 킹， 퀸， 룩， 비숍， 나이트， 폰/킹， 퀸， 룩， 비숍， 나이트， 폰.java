@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -10,74 +11,23 @@ public class Main {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		// 킹 & 퀸
-		int num1 = 1;
+		int[] original = {1, 1, 2, 2, 2, 8};
 		
-		// 룩 & 비숍 & 나이트
-		int num2 = 2;
+		// 6개의 배열을 만든다.
+		int[] arr = new int[6];
 		
-		// 폰
-		int num3 = 8;
-		
-		int k = scanner.nextInt();
-		int q = scanner.nextInt();
-		int l = scanner.nextInt();
-		int b = scanner.nextInt();
-		int n = scanner.nextInt();
-		int p = scanner.nextInt();
-		
-		// k랑 q가 num1과 같으면 그냥 출력
-		// num1 보다 크면 num1 - k&q
-		// num1 보다 작으면 (0) + 1
-		if (k == num1) {
-			k = 0;
-		} else if (k > num1) {
-			k = num1 - k;
-		} else {
-			k = 1;
+		// arr[i]번째에 값을 넣겠다.
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = scanner.nextInt();
 		}
+		
+		// i = 0 부터 6까지 반복하면서 값을 비교하겠다.
+		for (int i = 0; i < arr.length; i++) {
 
-		if (q == num1) {
-			q = 0;
-		} else if (q > num1) {
-			q = num1 - q;
-		} else {
-			q = 1;
+			System.out.print(original[i] - arr[i] + " ");
+					
 		}
 		
-		if (l == num2) {
-			l = 0;
-		} else if (l > num2) {
-				l = num2 - l;
-		} else {
-				l = num2 - l;
-		}
-		
-		if (b == num2) {
-			b = 0;
-		} else if (b > num2) {
-			b = num2 - b;
-		} else {
-			b = num2 - b;
-		}
-		
-		if (n == num2) {
-			n = 0;
-		} else if (n > num2) {
-			n = num2 - n;
-		} else {
-			n = num2 - n;
-		}
-		
-		if (p == num3) {
-			p = 0;
-		} else if (p > num3) {
-			p = num3 - p;
-		} else {
-			p = num3 - p;
-		}
-		
-		System.out.print(k + " " + q + " " + l + " " + b + " " + n + " " + p);
 		
 	} // main
 
