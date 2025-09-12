@@ -1,5 +1,6 @@
 package BOJ_04_1차원배열;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class BOJ_3052 {
@@ -8,21 +9,18 @@ public class BOJ_3052 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		int A = scanner.nextInt();
-		int B = 42;
-		
 		// 배열을 만든다.
-		int[] arr = new int[A];
+		int[] arr = new int[10];
+		
+		HashSet<Integer> set = new HashSet<>();
 		
 		// 배열에 값을 넣는다.
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < 10; i++) {
 			arr[i] = scanner.nextInt();
+			set.add(arr[i] % 42);
 		}
 		
-		for (int i = 0; i < arr.length; i++) {
-			
-		}
-		
+		System.out.println(set.size());
 		
 	} // main
 
